@@ -11,14 +11,12 @@ const Card: React.FC<CardProps> = ({ href, imgSrc, layoutId }) => {
   return (
     <Link href={href}>
       <motion.div
-        className="relative h-20 md:h-40 bg-gray-200 rounded-xl cursor-pointer hover:bg-gray-50 transition"
-        variants={variants}
-      >
+        className="relative h-20 md:h-40 bg-gray-400 rounded-xl cursor-pointer hover:bg-gray-50 transition"
+        variants={variants} >
         <motion.img
           src={imgSrc}
           className="w-full h-full"
-          layoutId={layoutId}
-        />
+          layoutId={layoutId} />
       </motion.div>
     </Link>
   )
@@ -43,8 +41,7 @@ export default function Home() {
         className="text-4xl mt-10 leading-none font-extrabold tracking-tight text-gray-900 sm:text-6xl lg:text-7xl md:mt-24"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
-        transition={{ duration: 2 }}
-      >
+        transition={{ duration: 2 }} >
         Construa sites modernos com agilidade sem precisar sair do HTML.
       </motion.h1>
 
@@ -55,23 +52,19 @@ export default function Home() {
         }}
         variants={variants}
         initial="hidden"
-        animate="visible"
-      >
+        animate="visible" >
         <Card
           href={'/nextjs'}
           imgSrc={'/img/nextjs.svg'}
-          layoutId={'nextjs-logo'}
-        />
+          layoutId={'nextjs-logo'} />
         <Card
           href={'/tailwind'}
           imgSrc={'/img/tailwind.svg'}
-          layoutId={'tailwind-logo'}
-        />
+          layoutId={'tailwind-logo'} />
         <Card
           href={'/framermotion'}
           imgSrc={'/img/framermotion.svg'}
-          layoutId={'framermotion-logo'}
-        />
+          layoutId={'framermotion-logo'} />
       </motion.div>
     </div>
   )
